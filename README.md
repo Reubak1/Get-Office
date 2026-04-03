@@ -1,99 +1,134 @@
-📦 Get-Office 
+<h1 align="center">📦 Get-Office</h1>
 
-Simple, automated Microsoft Office deployment and configuration script for Windows.
-Get-Office is a lightweight batch script that downloads, configures, installs, and activates Microsoft Office with user-selected components from a single batch file.
+<p align="center">
+  <b>Simple, automated Microsoft Office deployment & configuration script for Windows</b>
+</p>
 
-🖥️ Requirements
+<p align="center">
+  A lightweight batch script that <b>downloads, configures, installs, and activates</b> Microsoft Office — all from a single file.
+</p>
 
-Windows 10 / Windows 11
-Administrator privileges
-Internet connection
+<hr>
 
-⚡ Usage
+<h2>🖥️ Requirements</h2>
+<ul>
+  <li>Windows 10 / Windows 11</li>
+  <li>Administrator privileges</li>
+  <li>Internet connection</li>
+</ul>
 
-Go to releases and select get-office.bat
+<hr>
 
+<h2>⚡ Usage</h2>
 
-⚠️ The script will automatically request admin permissions if needed
+<h3>📥 Method 1: Download</h3>
+<ol>
+  <li>Go to <a href="https://github.com/Reubak1/Get-Office/releases" target="_blank"><b>Releases</b></a></li>
+  <li>Download <code>get-office.bat</code></li>
+  <li>Run the script</li>
+</ol>
 
+<h3>⚡ Method 2: One-Line PowerShell</h3>
+<p>Paste this into PowerShell:</p>
 
-🔌 STEP 1: Architecture
+<pre><code>irm https://reubak1.github.io/Get-Office/ | iex</code></pre>
 
-Press Y → 32-bit
+<p>⚠️ The script will automatically request administrator permissions if needed.</p>
 
-Press N → 64-bit (recommended)
+<hr>
 
+<h2>🔌 STEP 1: Architecture</h2>
+<table>
+  <tr>
+    <th>Input</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>Press <b>Y</b></td>
+    <td>32-bit</td>
+  </tr>
+  <tr>
+    <td>Press <b>N</b></td>
+    <td>64-bit (recommended)</td>
+  </tr>
+</table>
 
-📱 STEP 2: App Selection
+<hr>
 
-Choose which apps to install:
+<h2>📱 STEP 2: App Selection</h2>
+<p>Select which applications to install:</p>
 
-Access
+<ul>
+  <li>Access</li>
+  <li>Excel</li>
+  <li>Skype (Lync)</li>
+  <li>OneDrive</li>
+  <li>OneNote</li>
+  <li>Outlook</li>
+  <li>PowerPoint</li>
+  <li>Publisher</li>
+  <li>Word</li>
+</ul>
 
-Excel
+<hr>
 
-Skype (Lync)
+<h2>⬇️ STEP 3: Installation Process</h2>
 
-OneDrive
+<ul>
+  <li>Generate configuration XML</li>
+  <li>Download Office Deployment Tool</li>
+  <li>Extract setup files</li>
+  <li>Install Office</li>
+  <li>Run activation</li>
+  <li>Clean up temporary files</li>
+</ul>
 
-OneNote
+<hr>
 
-Outlook
+<h2>⚙️ Configuration Details</h2>
 
-PowerPoint
+<table>
+  <tr><td><b>Edition</b></td><td>Office 2024 Volume License</td></tr>
+  <tr><td><b>Channel</b></td><td>PerpetualVL2024</td></tr>
+  <tr><td><b>Language</b></td><td>en-gb</td></tr>
+  <tr><td><b>Updates</b></td><td>Enabled</td></tr>
+</table>
 
-Publisher
+<hr>
 
-Word
+<h2>🧠 How It Works</h2>
 
-⬇️ STEP 3: Installation Process
+<ul>
+  <li><b>User Input → XML Generation</b></li>
+  <li>Your choices determine which apps are excluded</li>
+  <li>Office Deployment Tool is downloaded from a hosted source</li>
+  <li>Silent install using <code>setup.exe /configure output.xml</code></li>
+</ul>
 
-The script will:
+<hr>
 
-Generate a configuration XML
+<h2>🔑 Activation</h2>
 
+<p>
+  Uses the <b>massgrave.dev activation script</b> hosted on this GitHub page.
+  This method helps bypass ISP restrictions that may block the script.
+</p>
 
-Download the Office Deployment Tool
+<hr>
 
-Extract setup files
+<h2>⚠️ Disclaimer</h2>
 
-Install Office
+<p>
+  This project is for <b>educational and testing purposes only</b>.
+</p>
 
-Run activation
+<ul>
+  <li>Ensure you comply with Microsoft’s licensing terms</li>
+  <li>Activation is provided by a third-party source</li>
+</ul>
 
-Clean up temporary files
+<hr>
 
-⚙️ Configuration Details
-
-Edition: Office 2024 Volume License
-
-
-Channel: PerpetualVL2024
-
-Language: en-gb
-
-Updates: Enabled
-
-🧠 How It Works
-
-User Input → XML Generation
-
-Your choices determine which apps are excluded
-
-Office Deployment Tool downloaded directly from a hosted source
-
-Silent Installation
-
-Uses setup.exe /configure output.xml
-
-🔑 Activation
-
-Uses massgrave.dev activation script hosted on this github page to bypass internet service providers blocking the script
-
-⚠️ Disclaimer
-
-This project is for educational and testing purposes only.
-
-Ensure you comply with Microsoft’s licensing terms.
-
-The activation method is provided by a third-party source.
+<p align="center">
+  ⭐ If you like this project, consider starring the repo!
+</p>
