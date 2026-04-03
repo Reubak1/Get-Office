@@ -86,10 +86,15 @@ powershell -Command "New-Item -ItemType Directory -Force '%~dp0temp' | Out-Null;
 move "output.xml" "temp" >nul
 cd temp
 
+
 echo Extracting deployment files...
 officedeploymenttool_18129-20030.exe /quiet /extract:"%CD%"
 
 echo.
+echo ============================================================
+echo [ Ready to install ]
+echo ============================================================
+pause
 echo [!] Installing Office. This window will remain open...
 setup.exe /configure output.xml
 
